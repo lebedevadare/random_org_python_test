@@ -37,15 +37,16 @@ def page(browser):
     page = context.new_page()
     logger.info("Открытие страницы https://www.random.org/widgets/integers/iframe")
     page.goto("https://www.random.org/widgets/integers/iframe")
+    # Ожидание полной загрузки страницы
+    page.wait_for_load_state("networkidle")
     # Установить куки
     # page.context.add_cookies([{"name": "cookie_name", "value": "cookie_value", "domain": ".random.org"}])
     yield page
     context.close()
 
-
 @pytest.fixture(scope="module")
 def random_org_page(page):
     """
-    Фикстура для создания объекта страницы RandomOrgPage
+    Фикстура для создания объекта страницы
     """
     return RandomOrgPage(page)
