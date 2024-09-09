@@ -3,7 +3,7 @@
 1. Клонируйте репозиторий:
 
     ```sh
-    git clone https://github.com/YOUR_GITHUB_USERNAME/random_org_python_test.git
+    git clone https://github.com/lebedevadare/random_org_python_test.git
     cd random_org_python_test
     ```
    
