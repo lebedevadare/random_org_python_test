@@ -6,3 +6,7 @@ __pycache__/
 playwright-report/
 .venv/
 venv/
+test_log.log
+min_input_not_found.png
+screenshot
+allure-results
